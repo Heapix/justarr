@@ -5,7 +5,7 @@
     </div>
     <div class="right-side-auth col s6">
       <div class="oblique"></div>
-      <router-link to="../" class="auth-redirect light-green-text text-accent-2">LO MARRACO</router-link>
+      <router-link to="../" class="auth-redirect light-green-text text-accent-2">Just Arrived</router-link>
     </div>
   </div>
 </template>

@@ -1,0 +1,113 @@
+{
+    "organizations": [
+        {
+            "organization": "heapix",
+            "years": [
+                ["Year", "Count"],
+                ["Heapix-2015", 2],
+                ["2016", 4],
+                ["2017", 7],
+                ["2018", 11],
+                ["2019", 16]
+            ],
+            "month": [
+                ["Month", "Count"],
+                ["heapix-month", 153],
+                ["Feb", 468],
+                ["March", 357],
+                ["Apr", 159],
+                ["May", 918],
+                ["June", 761],
+                ["July", 346],
+                ["Aug", 225],
+                ["Sep", 514],
+                ["Oct", 111],
+                ["Nov", 444],
+                ["Dec", 267]
+            ],
+            "days": [
+                ["days", "Count"],
+                ["heapix-days", 333],
+                ["Tue", 234],
+                ["Wed", 345],
+                ["Thu", 234],
+                ["Fri", 567],
+                ["Sat", 345],
+                ["Sun", 234]
+            ]
+        },
+        {
+            "organization": "Apple",
+            "years": [
+                ["Year", "Count"],
+                ["Apple-2015", 2],
+                ["2016", 4],
+                ["2017", 7],
+                ["2018", 11],
+                ["2019", 16]
+            ],
+            "month": [
+                ["Month", "Count"],
+                ["Apple-month", 153],
+                ["Feb", 468],
+                ["March", 357],
+                ["Apr", 159],
+                ["May", 918],
+                ["June", 761],
+                ["July", 346],
+                ["Aug", 225],
+                ["Sep", 514],
+                ["Oct", 111],
+                ["Nov", 444],
+                ["Dec", 267]
+            ],
+            "days": [
+                ["days", "Count"],
+                ["Apple-days", 333],
+                ["Tue", 234],
+                ["Wed", 345],
+                ["Thu", 234],
+                ["Fri", 567],
+                ["Sat", 345],
+                ["Sun", 234]
+            ]
+        },
+        {
+            "organization": "Google",
+            "years": [
+                ["Year", "Count"],
+                ["Google-2015", 2],
+                ["2016", 4],
+                ["2017", 7],
+                ["2018", 11],
+                ["2019", 16]
+            ],
+            "month": [
+                ["Month", "Count"],
+                ["Google-month", 153],
+                ["Feb", 468],
+                ["March", 357],
+                ["Apr", 159],
+                ["May", 918],
+                ["June", 761],
+                ["July", 346],
+                ["Aug", 225],
+                ["Sep", 514],
+                ["Oct", 111],
+                ["Nov", 444],
+                ["Dec", 267]
+            ],
+            "days": [
+                ["days", "Count"],
+                ["Google-days", 333],
+                ["Tue", 234],
+                ["Wed", 345],
+                ["Thu", 234],
+                ["Fri", 567],
+                ["Sat", 345],
+                ["Sun", 234]
+            ]
+        }
+    ]
+}
+
