@@ -2,6 +2,8 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import store from '../store'
 
+import VueGoogleCharts from 'vue-google-charts'
+
 import CreateUser from '../components/profile/CreateUser.vue';
 import Users from '../components/profile/Users.vue';
 import PendingUsers from '../components/profile/PendingUsers.vue';
@@ -35,6 +37,8 @@ import About from '../components/feed/about/About.vue';
 import AboutEdit from '../components/feed/about/AboutEdit.vue';
 import AboutPreview from '../components/feed/about/AboutPreview.vue';
 
+import Statistics from '../components/feed/statistics/Statistics.vue';
+
 const ROUTE_ROLES = {
   'sadm': 1,
   'adm': 2,
@@ -44,6 +48,7 @@ const ROUTE_ROLES = {
 }
 
 Vue.use(Router)
+Vue.use(VueGoogleCharts)
 const router = new Router({
   mode: 'history',
   routes: [
@@ -54,6 +59,11 @@ const router = new Router({
       component: Events,
       name: 'all-events'
     },
+    {
+	  path: '/stats',
+	  component: Statistics,
+	  name: 'all-statistics',
+	},
     {
       path: '/about/edit',
       component: AboutEdit,

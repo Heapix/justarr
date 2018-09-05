@@ -4,12 +4,13 @@
       <div class="nav-wrapper green">
         <div class="row">
           <router-link to="/">
-            <a class="brand-logo">Lo Marraco</a>
+            <a class="brand-logo">Just Arrived</a>
           </router-link>
           <ul class="right hide-on-med-and-down">
 
             <li :class="activePath('/events')"><router-link to="/events">Events</router-link></li>
             <li :class="activePath('/news')"><router-link to="/news">News</router-link></li>
+            <li :class="activePath('/stats')"><router-link to="/stats">Statistics</router-link></li>
 
             <template v-if="isLogged">
               <li><a class="dropdown-trigger" data-target="dropdown1">{{loggedUser.firstName}}<i class="material-icons right">arrow_drop_down</i></a></li>
