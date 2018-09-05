@@ -1,19 +1,22 @@
 <template>
-	<div :onload='getData()'  >
-		<h3>Statistics</h3>
-			<div v-for="(el, index) in data" :key="index" class="col s1" >
-				<input :value="el.organization" @click="chooseOrganization(index)" type="button" class="waves-effect waves-light btn green marge">
-			</div>
-			<div class="row">
-				<input v-if=(this.company.years) value="statistics by years" @click="showByYears()" type="button" class="waves-effect waves-teal btn-flat">
-				<input v-if=(this.company.month) value="statistics by month" @click="showByMonth()" type="button" class="waves-effect waves-teal btn-flat">
-				<input v-if=(this.company.days) value="statistics by days" @click="showByDays()" type="button" class="waves-effect waves-teal btn-flat">
-			</div>
-			<GChart class="chart"
+			<div>
+						<h3>Statistics</h3>
+						<div class="row">
+									<div v-for="(el, index) in data" :key="index" class="col s2" >
+												<input :value="el.organization" @click="chooseOrganization(index)" type="button" class="waves-effect waves-light btn green">
+									</div>
+						</div>
+						<div class="row">
+									<input v-if=(this.company.years) value="statistics by years" @click="showByYears()" type="button" class="waves-effect waves-teal btn-flat">
+									<input v-if=(this.company.month) value="statistics by month" @click="showByMonth()" type="button" class="waves-effect waves-teal btn-flat">
+									<input v-if=(this.company.days) value="statistics by days" @click="showByDays()" type="button" class="waves-effect waves-teal btn-flat">
+									<input v-if=(this.company.hours) value="statistics by days" @click="showByHours()" type="button" class="waves-effect waves-teal btn-flat">
+						</div>
+						<GChart class="chart"
 							type="LineChart"
 							:data="chartData"
 							:options="chartOptions"/>
-	</div>
+			</div>
 </template>
 
 <script>
@@ -21,6 +24,9 @@
   import axios from 'axios'
 
 	export default {
+	  created () {
+	    this.getData();
+	  },
 		name: "Statistics",
 		components: {
 			GChart
@@ -41,8 +47,8 @@
 		},
 		methods: {
 			chooseOrganization: function (index) {
-				this.chartData = null,
-				this.company = this.data[index]
+				this.chartData = null
+				this.company = this.data[index];
 				this.chartData = this.checkData(this.company);
 		  	this.chartOptions.title = this.company.organization;
 			},
@@ -55,6 +61,10 @@
 					} else {
 						if (data.days) {
 							return (this.company.days)
+						} else {
+							if (data.hours) {
+				  			return (this.company.hours)
+							}
 						}
 					}
 				}
@@ -68,12 +78,15 @@
 			showByDays: function () {
 				this.chartData = this.company.days
 			},
+			showByHours: function () {
+				this.chartData = this.company.hours
+			},
 			getData () {
 			axios.get('http://localhost:3000/organizations')
 				.then(response => {
 					this.data = response.data
 				})
-		}
+			}
 		}
 	}
 </script>
